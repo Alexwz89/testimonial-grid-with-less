@@ -21,6 +21,8 @@ The challenge is to build out this testimonials grid section and get it looking 
 
 ## The Outcome
 
+https://alexwz89.github.io/testimonial-grid-with-less/
+
 ![1. Outcome for PC(1024px above)](./outcome-pc.jpg)
 ![2. Outcome for pd(768~1024px)](./outcome-pad.jpg)
 ![3. Outcome for mobile(768px below)](./outcome-mobile.jpg)
