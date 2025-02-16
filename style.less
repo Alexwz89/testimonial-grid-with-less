@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Barlow", serif;
+}
+
+/* define Colors */
+:root {
+  --dark-blue: #19202d;
+  --grey-100: #e7eaee;
+  --grey-200: #cfcfcf;
+  --grey-400: #676d7e;
+  --grey-500: #48556a;
+  --purple-50: #ede4ff;
+  --purple-300: #a775f1;
+  --purple-500: #733fc8;
+}
+/* define Barlow font for Medium and semibold */
+.barlow-medium() {
+  font-family: "Barlow", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semibold() {
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* define Topography according to Figma */
+.text-preset-1 () {
+  .barlow-semibold;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.text-preset-2 () {
+  .barlow-medium;
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.text-preset-3 () {
+  .barlow-medium;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.text-preset-4 () {
+  .barlow-medium;
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+body {
+  background-color: var(--grey-100);
+}
+
+main {
+  padding: 3rem;
+}
+
+.testimonials {
+  display: grid;
+  gap: 2rem;
+  grid-auto-columns: 1fr;
+}
+
+.testimonial {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 40px 60px 50px -47px #48556a;
+}
+
+.grid-col-span-2() {
+  grid-column: span 2;
+}
+
+.testimonial:nth-child(1) {
+  background-color: var(--purple-500);
+  color: white;
+}
+
+.testimonial:nth-child(2) {
+  background-color: var(--grey-500);
+  color: white;
+}
+
+.testimonial:nth-child(3) {
+  background-color: white;
+  color: black;
+}
+
+.testimonial:nth-child(4) {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.testimonial:nth-child(5) {
+  background-color: white;
+  color: black;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .testimonial {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial:nth-child(1) {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 3rem;
+  }
+  .testimonial:nth-child(1),
+  .testimonial:nth-child(4),
+  .testimonial:nth-child(5) {
+    .grid-col-span-2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .testimonial:nth-child(1) {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 3rem;
+  }
+  .testimonial:nth-child(1),
+  .testimonial:nth-child(4) {
+    .grid-col-span-2;
+  }
+
+  .testimonial:nth-child(5) {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+.card {
+  .header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    img {
+      width: 1.75rem;
+      border-radius: 100%;
+      border: 3px solid var(--purple-300);
+    }
+    .full_name {
+      .text-preset-2;
+      margin-bottom: 4px;
+    }
+    .profile {
+      .text-preset-4;
+    }
+  }
+  .title {
+    .text-preset-1;
+    padding: 1.6em 0;
+  }
+  .text {
+    .text-preset-3;
+  }
+}
+
+/* define footer */
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

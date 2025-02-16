@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js"></script>
+    <title>Frontend Mentor | Testimonial Card</title>
+  </head>
+  <body>
+    <main>
+      <div class="testimonials"></div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Alexwz89">Alexwz89</a>.
+      </div>
+    </footer>
+
+    <script>
+      const container = document.querySelector(".testimonials");
+      testimonials_db.forEach((testimonial) => {
+        const card = document.createElement("div");
+        card.className = "testimonial";
+        card.innerHTML = `<div class="card">
+          <div class="header">
+            <img src="${testimonial.img}" alt="" class="avatar" />
+            <div class="text-info">
+              <p class="full_name">${testimonial.full_name}</p>
+              <p class="profile">${testimonial.profile}</p>
+            </div>
+          </div>
+          <h3 class="title">
+              ${testimonial.title}
+          </h3>
+          <p class="text">
+              ${testimonial.text}
+          </p>
+        </div>`;
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
