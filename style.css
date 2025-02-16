@@ -98,7 +98,7 @@ main {
   border: 3px solid var(--purple-300);
 }
 .card .header .full_name {
-  font-family: "Barlow", serif;
+  font-family: "Barlow Semi Condensed", serif;
   font-weight: 500;
   font-style: normal;
   font-size: 13px;
@@ -106,14 +106,14 @@ main {
   margin-bottom: 4px;
 }
 .card .header .profile {
-  font-family: "Barlow", serif;
+  font-family: "Barlow Semi Condensed", serif;
   font-weight: 500;
   font-style: normal;
   font-size: 11px;
   line-height: 1.1;
 }
 .card .title {
-  font-family: "Barlow", serif;
+  font-family: "Barlow Semi Condensed", serif;
   font-weight: 600;
   font-style: normal;
   font-size: 20px;
@@ -121,7 +121,7 @@ main {
   padding: 1.6em 0;
 }
 .card .text {
-  font-family: "Barlow", serif;
+  font-family: "Barlow Semi Condensed", serif;
   font-weight: 500;
   font-style: normal;
   font-size: 13px;
